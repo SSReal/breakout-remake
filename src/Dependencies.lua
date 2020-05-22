@@ -5,6 +5,7 @@ Class = require 'lib/class'
 require 'src/constants'
 
 require 'src/Util'
+require 'src/LevelMaker'
 
 require 'src/StateMachine'
 
