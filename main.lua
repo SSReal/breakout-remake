@@ -1,7 +1,7 @@
 --[[
     Breakout Remake
     Made By Sajal Singhal
-    "The Bounce Update"
+    "The Brick Update"
 
     Credit for graphics (amazing work!):
     https://opengameart.org/users/buch
@@ -41,7 +41,8 @@ function love.load()
 
     gFrames = {
         ['paddles'] = GenerateQuadsPaddles(gTextures['main']),
-        ['balls'] = GenerateQuadsBalls(gTextures['main'])
+        ['balls'] = GenerateQuadsBalls(gTextures['main']),
+        ['bricks'] = GenerateQuadsBricks(gTextures['main'])
     }
     gSounds = {
         ['paddle-hit'] = love.audio.newSource('sounds/paddle_hit.wav','static'),

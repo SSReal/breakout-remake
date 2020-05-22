@@ -69,7 +69,6 @@ function GenerateQuadsPaddles(atlas)
 end
 
 function GenerateQuadsBalls(atlas)
-
     local x= 96
     local y= 48
 
@@ -92,4 +91,8 @@ function GenerateQuadsBalls(atlas)
     end
 
     return quads
+end
+
+function GenerateQuadsBricks(atlas)
+    return table.slice(GenerateQuads(atlas, 32, 16), 1, 21)
 end

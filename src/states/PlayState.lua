@@ -10,6 +10,8 @@ function PlayState:init()
     self.ball.x = VIRTUAL_WIDTH/2 - 4
     self.ball.y = VIRTUAL_HEIGHT - 42
     
+    self.bricks = LevelMaker.createMap()
+    
     self.paused = false
 end
 
