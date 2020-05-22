@@ -38,6 +38,12 @@ function PlayState:update(dt)
         gSounds['paddle-hit']:play()
     end
 
+    for k,brick in pairs(bricks) do
+        if self.ball:collides(brick) then
+            brick:hit()
+        end
+    end
+
     if love.keyboard.wasPressed('escape') then
         love.event.quit()
     end
