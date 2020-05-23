@@ -1,7 +1,7 @@
 --[[
     Breakout Remake
     Made By Sajal Singhal
-    "The Brick Update"
+    "The Collision Update"
 
     Credit for graphics (amazing work!):
     https://opengameart.org/users/buch
