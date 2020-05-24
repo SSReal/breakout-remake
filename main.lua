@@ -1,7 +1,7 @@
 --[[
     Breakout Remake
     Made By Sajal Singhal
-    "The Hearts Update"
+    "The Pretty Colors Update"
 
     Credit for graphics (amazing work!):
     https://opengameart.org/users/buch
