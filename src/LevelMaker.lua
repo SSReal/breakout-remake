@@ -2,6 +2,13 @@ LevelMaker = Class{}
 
 function LevelMaker.createMap(level)
     local bricks = {}
+    --for testing only
+    -- if level == 0 then
+    --     b = Brick(40,40)
+    --     table.insert(bricks,b)
+    --     return bricks           --only one brick in the level
+    -- end
+
     local numRows = math.random(1,5)
     local numCols = math.random(7,13)
     --ensuring numCols is odd
