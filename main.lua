@@ -1,7 +1,7 @@
 --[[
     Breakout Remake
     Made By Sajal Singhal
-    "The High Scores Update"
+    "The Entry Update"
 
     Credit for graphics (amazing work!):
     https://opengameart.org/users/buch
@@ -69,7 +69,8 @@ function love.load()
         ['serve'] = function() return ServeState() end,
         ['victory'] = function() return VictoryState() end,
         ['game-over'] = function() return GameOverState() end,
-        ['high-scores'] = function() return HighScoreState() end
+        ['high-scores'] = function() return HighScoreState() end,
+        ['enter-high-score'] = function() return EnterHighScoreState() end
     }
     gStateMachine:change('start',{
         highScores = loadHighScores()
@@ -116,7 +117,7 @@ function loadHighScores()
     love.filesystem.setIdentity('breakout')
 
     --if the file doesn't exist, intialize it with some default scores (for testing)
-    if not love.filesystem.exists('brreakout.lst') then
+    if not love.filesystem.exists('breakout.lst') then
         local scores = ''
         for i = 10, 1,-1 do                 --5 for testing, 1 for actual
             scores = scores .. 'CTO\n'
