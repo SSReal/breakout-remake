@@ -1,7 +1,7 @@
 --[[
     Breakout Remake
     Made By Sajal Singhal
-    "The Paddle Select Update"
+    "The Music Update"
 
     Credit for graphics (amazing work!):
     https://opengameart.org/users/buch
@@ -122,7 +122,7 @@ function loadHighScores()
     love.filesystem.setIdentity('breakout')
 
     --if the file doesn't exist, intialize it with some default scores (for testing)
-    if not love.filesystem.exists('breakout.lst') then
+    if not love.filesystem.exists('breakout.lst') then              --use love.filesystem.getInfo('breakout.lst') for love2d 11
         local scores = ''
         for i = 10, 1,-1 do                 --5 for testing, 1 for actual
             scores = scores .. 'CTO\n'

@@ -56,21 +56,21 @@ function Brick:init(x, y)
 
     --spread of particles, as given as deviation in x and y axis
     --normal spread is more natural than uniform spread
-    --self.psystem:setAreaSpread('normal',10,10)      for love2d 10
-    self.psystem:setEmissionArea('normal',10,10)      --for love2d 11
+    self.psystem:setAreaSpread('normal',10,10)      for love2d 10
+    --self.psystem:setEmissionArea('normal',10,10)      --for love2d 11
 
 end
 
 function Brick:hit()
 
     self.psystem:setColors(
-        paletteColors[self.color].r/255,
-        paletteColors[self.color].g/255,                        --changed for love2d 11, as colors are between 0 and 1 now
-        paletteColors[self.color].b/255,                        --remove /255 from all for love2d 10
-        55*(self.tier + 1)/255,
-        paletteColors[self.color].r/255,
-        paletteColors[self.color].g/255,
-        paletteColors[self.color].b/255,
+        paletteColors[self.color].r,
+        paletteColors[self.color].g,                        --changed for love2d 10
+        paletteColors[self.color].b,                        --add /255 from all for love2d 11
+        55*(self.tier + 1),
+        paletteColors[self.color].r,
+        paletteColors[self.color].g,
+        paletteColors[self.color].b,
         0
     )
     self.psystem:emit(64)
